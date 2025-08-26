@@ -3,8 +3,6 @@ services:
     name: bmi-calculator
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    buildCommand: "pip install -r BMI_Calcuatotor/requirements.txt"
+    startCommand: "gunicorn BMI_Calcuatotor.app:app"
     autoDeploy: true
-
-
