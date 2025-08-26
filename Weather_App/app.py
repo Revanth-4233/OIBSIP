@@ -92,6 +92,8 @@ html_code = """
 """
 
 @app.route("/", methods=["GET", "POST"])
+def home():
+    return "Weather App is running!"
 def weather_app():
     weather = None
     error = None
@@ -124,3 +126,4 @@ def weather_app():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
