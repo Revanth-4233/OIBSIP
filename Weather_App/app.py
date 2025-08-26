@@ -123,7 +123,8 @@ def weather_app():
 
     return render_template_string(html_code, weather=weather, error=error)
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
+
 
