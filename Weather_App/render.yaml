@@ -5,8 +5,9 @@ services:
     plan: free               # free tier
     region: oregon           # or frankfurt
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn Weather_App.app:app
     autoDeploy: true
     envVars:
       - key: API_KEY
         sync: false           # you will set it manually in Render dashboard
+
