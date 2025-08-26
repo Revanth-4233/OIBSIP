@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: weather-app        # change name if you want
+    env: python
+    plan: free               # free tier
+    region: oregon           # or frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeploy: true
+    envVars:
+      - key: API_KEY
+        sync: false           # you will set it manually in Render dashboard
